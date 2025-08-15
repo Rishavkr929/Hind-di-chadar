@@ -93,7 +93,7 @@ body {
 .hero .card {
   background: #ffe3b3;
   border-radius: 24px;
-  width: 1000px;
+  width: auto;
 }
 
 .hero .guru-card {
