@@ -46,6 +46,7 @@ body {
   height: auto;
   position: absolute;
   left: 20px; /* Keep logo fixed at left */
+  top: 0;
 }
 
 .header-bar h5 {
