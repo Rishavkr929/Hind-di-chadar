@@ -1,0 +1,140 @@
+/* Body background */
+body {
+  background-color: #fef2d7 !important; /* Beige background */
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for falling images */
+#scattered-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 0; /* Behind page content but above body background */
+}
+
+/* Keyframe for fall animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(calc(100vh + 40px)) translateX(var(--drift, 0px))
+      rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.header-bar {
+  background-color: #fde5c8; /* Match first image background */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  padding: 10px 20px;
+  position: relative; /* Needed to position logo */
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  left: 20px; /* Keep logo fixed at left */
+}
+
+.header-bar h5 {
+  color: #3c1c00; /* Match first image text color */
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+}
+
+/* Logo size */
+.logo {
+  width: 60px;
+}
+
+/* Menu boxes */
+.menu-box {
+  background: linear-gradient(to bottom, #ffe3b3, #ffbb66);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  color: #4b2e00;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.menu-box:hover {
+  transform: translateY(-5px);
+}
+
+.menu-box img {
+  width: 40px;
+  margin-bottom: 8px;
+}
+
+.menu-box p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Hero Card Layout */
+.hero .card {
+  background: #ffe3b3;
+  border-radius: 24px;
+  width: 1000px;
+}
+
+.hero .guru-card {
+  display: flex;
+  align-items: center;
+  background: #ffe3b3;
+  border-radius: 24px;
+  padding: 15px;
+  gap: 15px; /* space between image and text */
+}
+
+/* Guru Image - default mobile friendly */
+.guru-img {
+  width: 90px;
+  height: auto;
+}
+
+/* Hero Text Centering */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .btn {
+  background-color: #ffbb66;
+}
+
+/* Small Button */
+.small-btn {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+
+/* ===============================
+   Desktop adjustments only
+   =============================== */
+@media (min-width: 768px) {
+  .guru-img {
+    position: relative;
+    left: -132px; /* Adjust this value to move image horizontally */
+    top: 0; /* Adjust this value to move image vertically */
+  }
+}
