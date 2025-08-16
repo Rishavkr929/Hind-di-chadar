@@ -248,7 +248,7 @@ body {
 @media (min-width: 768px) {
   .guru-img {
     position: relative;
-    left: -132px;
+    /* left: -132px; */
     top: 0;
   }
 }
