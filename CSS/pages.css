@@ -18,14 +18,14 @@ body {
   top: 0;
 }
 
-/* .header-bar h5 {
-  color: #3c1c00; 
+.header-bar h5 {
+  color: #3c1c00;
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.4;
   text-align: center;
   margin: 0;
-} */
+}
 
 .main-body {
   display: flex;
