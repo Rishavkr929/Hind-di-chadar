@@ -37,29 +37,37 @@ body {
 }
 
 .header-bar {
-  background-color: #fde5c8; /* Match first image background */
+  background-color: #fde5c8;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center content horizontally */
+  justify-content: center;
   padding: 10px 20px;
-  position: relative; /* Needed to position logo */
+  position: relative;
+  min-height: 60px; /* consistent height */
+  box-sizing: border-box;
 }
 
+/* Logo always fixed left and vertically centered */
 .header-logo {
   width: 50px;
   height: auto;
   position: absolute;
-  left: 20px; /* Keep logo fixed at left */
-  top: 0;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0; /* remove any default spacing */
 }
 
+/* Title always centered */
 .header-bar h5 {
-  color: #3c1c00; /* Match first image text color */
+  color: #3c1c00;
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1.4;
   text-align: center;
   margin: 0;
+  padding: 0;
+  flex: 1; /* ensures text stays centered even if logo is present */
 }
 
 /* Logo size */
@@ -214,10 +222,12 @@ body {
 
 /* Submit Button */
 .submit-btn {
-  background-color: #fee5bd;
-  color: black;
-  transition: background-color 0.3s ease;
-  border: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  min-width: fit-content;
+  background-color: #fdd9a1;
 }
 
 .submit-btn:hover {
@@ -245,14 +255,17 @@ body {
 /* ===============================
    Mobile adjustments
    =============================== */
-@media (max-width: 767px) {
+@media (max-width: 576px) {
   .header-bar {
     flex-direction: column;
+    justify-content: center;
+    min-height: unset;
     padding: 8px 10px;
   }
 
   .header-logo {
-    /* position: static; */
+    position: static;
+    transform: none;
     margin-bottom: 5px;
   }
 
