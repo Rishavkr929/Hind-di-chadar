@@ -238,49 +238,44 @@ body {
 @media (max-width: 576px) {
   .glass-card {
     padding: 1.5rem;
+    border-radius: 24px;
   }
 }
-
-/* ===============================
-   Desktop adjustments only
-   =============================== */
-@media (min-width: 768px) {
-  .guru-img {
-    position: relative;
-    left: -132px; /* Adjust this value to move image horizontally */
-    top: 0; /* Adjust this value to move image vertically */
-  }
-}
-
-/* ===============================
-   Mobile adjustments
-   =============================== */
-/* Minimal responsive rules for consistent spacing on all devices */
 @media (max-width: 768px) {
   .header-bar {
     flex-direction: column;
-    justify-content: center;
-    padding: 8px 10px;
+    padding: 8px;
   }
+
   .header-logo {
     position: static;
     transform: none;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
+
+  .header-bar h5 {
+    font-size: 1rem;
+  }
+
   .hero .guru-card {
     flex-direction: column;
     text-align: center;
   }
+
   .guru-img {
-    position: static;
+    width: 70px;
     margin-bottom: 10px;
   }
-}
 
-@media (min-width: 768px) {
-  .guru-img {
-    position: relative;
-    left: -132px; /* Adjust this value to move image horizontally */
-    top: 0; /* Adjust this value to move image vertically */
+  .menu-box {
+    padding: 10px;
+  }
+
+  .menu-box img {
+    width: 35px;
+  }
+
+  .menu-box p {
+    font-size: 12px;
   }
 }
