@@ -247,27 +247,28 @@ body {
 }
 
 /* Tablets & Small Screens */
-@media (max-width: 768px) {
+@media (min-width: 992px) {
   .hero .guru-card {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
   }
-
-  .guru-img {
-    position: static;
-    left: auto;
-    top: auto;
-  }
-
-  .header-logo {
-    width: 40px;
-  }
-}
-
-/* Desktops */
-@media (min-width: 768px) {
   .guru-img {
     position: relative;
     left: -132px;
+    top: 0;
+  }
+}
+
+/* Phone & small tablet: stack vertically */
+@media (max-width: 991px) {
+  .hero .guru-card {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .guru-img {
+    position: static !important;
+    margin-bottom: 10px;
+    left: 0;
   }
 }
