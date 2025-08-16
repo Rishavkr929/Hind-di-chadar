@@ -225,3 +225,49 @@ body {
 }
 
 /* ================== Responsive Media Hubs ================== */
+
+/* Phones */
+@media (max-width: 576px) {
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .guru-img {
+    width: 70px;
+  }
+
+  .header-bar h5 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .menu-box p {
+    font-size: 12px;
+  }
+}
+
+/* Tablets & Small Screens */
+@media (max-width: 768px) {
+  .hero .guru-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .guru-img {
+    position: static;
+    left: auto;
+    top: auto;
+  }
+
+  .header-logo {
+    width: 40px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 768px) {
+  .guru-img {
+    position: relative;
+    left: -132px;
+  }
+}
