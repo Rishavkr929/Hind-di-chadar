@@ -249,18 +249,26 @@ body {
 /* Tablets & Small Screens */
 @media (max-width: 768px) {
   .hero .guru-card {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    background: #ffe3b3;
+    border-radius: 24px;
+    padding: 15px;
+    opacity: 0.8;
   }
 
   .guru-img {
-    position: static;
-    left: auto;
-    top: auto;
+    width: 90px;
+    height: auto;
   }
 
   .header-logo {
-    width: 40px;
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
