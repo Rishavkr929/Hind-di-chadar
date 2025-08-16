@@ -1,5 +1,5 @@
 const container = document.getElementById("scattered-container");
-const imageSrc = "img/rr.png"; // Use correct path
+const imageSrc = "/img/rr.png"; // Use correct path
 const count = 40; // Number of images falling at a time
 const size = 40; // Base size in px
 const fallSpeed = 10000; // Base fall duration in ms
