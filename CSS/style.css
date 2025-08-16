@@ -253,11 +253,11 @@ body {
     text-align: center;
   }
 
-  .guru-img {
+  /* .guru-img {
     position: static;
     left: auto;
     top: auto;
-  }
+  } */
 
   .header-logo {
     width: 40px;
