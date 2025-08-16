@@ -1,34 +1,20 @@
-/* ================== Base Styles ================== */
+/* ================== Global ================== */
 body {
-  height: 100vh;
   font-family: "Poppins", sans-serif;
   background-color: #fef2d7 !important;
-  position: relative;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
 
-#scattered-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  pointer-events: none;
-  z-index: 0;
+/* Consistent spacing between all main sections */
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-@keyframes fall {
-  0% {
-    transform: translateY(0px) translateX(0px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(calc(100vh + 40px)) translateX(var(--drift, 0px))
-      rotate(360deg);
-    opacity: 0;
-  }
+/* Remove random mt-* spacing & control it in CSS */
+.hero {
+  margin-top: 20px; /* gap between header & hero */
 }
 
 /* ================== Header ================== */
@@ -39,13 +25,10 @@ body {
   justify-content: center;
   padding: 10px 20px;
   position: relative;
-  min-height: 60px;
-  box-sizing: border-box;
 }
 
 .header-logo {
   width: 50px;
-  height: auto;
   position: absolute;
   left: 20px;
   top: 50%;
@@ -58,22 +41,45 @@ body {
   font-size: 1.2rem;
   line-height: 1.4;
   text-align: center;
-  margin: 0;
-  padding: 0;
-  flex: 1;
 }
 
-.logo {
-  width: 60px;
+/* ================== Hero ================== */
+.hero .guru-card {
+  background: #ffe3b3;
+  border-radius: 24px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* ================== Menu Boxes ================== */
+.guru-img {
+  width: 90px;
+  height: auto;
+}
+
+.hero-text p {
+  color: #4b2e00;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hero .btn {
+  background-color: #ffbb66;
+  border-radius: 12px;
+}
+
+.hero .btn a {
+  color: #3c1c00;
+  text-decoration: none;
+}
+
+/* ================== Menu ================== */
 .menu-box {
   background: linear-gradient(to bottom, #ffe3b3, #ffbb66);
   border-radius: 15px;
   padding: 15px;
   text-align: center;
-  color: #4b2e00;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
@@ -88,186 +94,20 @@ body {
 }
 
 .menu-box p {
-  margin: 0;
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
 }
 
-/* ================== Hero ================== */
-.hero .card {
-  background: #ffe3b3;
-  border-radius: 24px;
-  width: auto;
-}
-
-.hero .guru-card {
-  display: flex;
-  align-items: center;
-  background: #ffe3b3;
-  border-radius: 24px;
-  padding: 15px;
-  opacity: 0.8;
-}
-
-.guru-img {
-  width: 90px;
-  height: auto;
-}
-
-.hero p {
-  color: #4b2e00;
-  font-weight: 500;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero .btn {
-  background-color: #ffbb66;
-  border-radius: 12px;
-  width: 90px;
-}
-
-.btn a {
-  color: #3c1c00;
-  text-decoration: none;
-}
-
-.small-btn {
-  padding: 4px 10px;
-  font-size: 0.85rem;
-}
-
-/* ================== Contact ================== */
-.contact {
-  position: relative;
-}
-
-.heading {
-  background-color: #fdd9a1;
-  padding: 6px 12px;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-.input-bg {
-  background-color: rgba(253, 217, 161, 0.6);
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.input-bg:focus {
-  background-color: #fdd9a1;
-  outline: none;
-  box-shadow: none;
-}
-
-/* Glassmorphism card effect */
-.glass-card {
-  background: rgba(255, 255, 255, 0.13);
-  backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(11px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 18px 9px rgba(255, 255, 255, 0.9);
-  position: relative;
-  overflow: hidden;
-}
-
-.glass-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-}
-
-.glass-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.8),
-    transparent,
-    rgba(255, 255, 255, 0.3)
-  );
-}
-
-/* Submit Button */
-.submit-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 0.5rem 2rem;
-  border-radius: 50px;
-  min-width: fit-content;
-  background-color: #fdd9a1;
-}
-
-.submit-btn:hover {
-  background-color: #fdd9a1;
-}
-
-/* ================== Responsive Media Hubs ================== */
-
-/* Phones */
-@media (max-width: 576px) {
-  .glass-card {
-    padding: 1.5rem;
-  }
-
-  .guru-img {
-    width: 70px;
-  }
-
-  .header-bar h5 {
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-
-  .menu-box p {
-    font-size: 12px;
-  }
-}
-
-/* Tablets & Small Screens */
+/* ================== Responsive ================== */
 @media (max-width: 768px) {
   .hero .guru-card {
     flex-direction: column;
     text-align: center;
   }
-
   .guru-img {
-    position: static;
-    left: auto;
-    top: auto;
+    width: 70px;
   }
-
   .header-logo {
     width: 40px;
   }
 }
-
-/* Desktops */
-/* @media (min-width: 768px) {
-  .guru-img {
-    position: relative;
-    left: -132px;
-  }
-} */
