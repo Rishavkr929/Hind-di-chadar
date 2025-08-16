@@ -265,9 +265,9 @@ body {
 }
 
 /* Desktops */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .guru-img {
     position: relative;
     left: -132px;
   }
-}
+} */
