@@ -241,30 +241,39 @@ body {
     border-radius: 24px;
   }
 }
-@media (max-width: 768px) {
+
+/* ===============================
+   Desktop adjustments only
+   =============================== */
+@media (min-width: 768px) {
+  .guru-img {
+    position: relative;
+    left: -132px;
+    top: 0;
+  }
+}
+
+/* ===============================
+   Mobile adjustments
+   =============================== */
+@media (max-width: 576px) {
   .header-bar {
     flex-direction: column;
-    padding: 8px;
+    justify-content: center;
+    min-height: unset;
+    padding: 8px 10px;
   }
 
   .header-logo {
-    position: static;
+    /* position: static; */
+    top: 0;
     transform: none;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 
   .header-bar h5 {
     font-size: 1rem;
-  }
-
-  .hero .guru-card {
-    flex-direction: column;
     text-align: center;
-  }
-
-  .guru-img {
-    width: 70px;
-    margin-bottom: 10px;
   }
 
   .menu-box {
@@ -272,10 +281,31 @@ body {
   }
 
   .menu-box img {
-    width: 35px;
+    width: 30px;
   }
 
   .menu-box p {
     font-size: 12px;
+  }
+
+  .hero .guru-card {
+    flex-direction: column;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  .guru-img {
+    width: 70px;
+    position: static;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+  }
+
+  .small-btn {
+    font-size: 0.8rem;
+    padding: 3px 8px;
   }
 }
