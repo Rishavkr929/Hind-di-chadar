@@ -85,9 +85,9 @@ body {
   text-align: center;
   color: #4b2e00;
   transition: transform 0.2s;
-  width: 100%; /* Fill the column */
-  height: auto; /* Let height scale naturally */
-  margin: 0 auto;
+  margin: 10px 0 -72px 90px;
+  width: 422px;
+  height: 436px;
 }
 
 .menu-box:hover {
