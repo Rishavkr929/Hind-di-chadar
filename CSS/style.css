@@ -78,12 +78,16 @@ body {
 /* Menu boxes */
 .menu-box {
   background: linear-gradient(to bottom, #ffe3b3, #ffbb66);
-  border-radius: 15px;
+  background: url("/img/box.png") no-repeat center/cover;
+  background-size: cover;
+  background-size: contain;
   padding: 15px;
   text-align: center;
   color: #4b2e00;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  margin: 10px 0 -72px 90px;
+  width: 422px;
+  height: 436px;
 }
 
 .menu-box:hover {
@@ -91,14 +95,21 @@ body {
 }
 
 .menu-box img {
-  width: 40px;
-  margin-bottom: 8px;
+  width: 132px;
+  margin-bottom: 0;
+  margin: 14px 96px 0 0;
+  padding: 15px 0 0 0;
 }
 
 .menu-box p {
-  margin: 0;
+  margin: 12px 0 0 1px;
   font-weight: bold;
   font-size: 14px;
+  padding: 0 99px 0 0;
+}
+
+.menu-box a {
+  text-decoration: none;
 }
 
 /* Hero Card Layout */
@@ -243,69 +254,72 @@ body {
 }
 
 /* ===============================
-   Desktop adjustments only
-   =============================== */
-@media (min-width: 768px) {
-  .guru-img {
-    position: relative;
-    /* left: -132px; */
-    top: 0;
-  }
-}
-
-/* ===============================
-   Mobile adjustments
+   Unified Responsive Styles
    =============================== */
 @media (max-width: 576px) {
+  .guru-img {
+    width: clamp(70px, 12vw, 150px); /* Flexible size */
+    position: relative;
+    top: 0;
+  }
+
   .header-bar {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    min-height: unset;
+    align-items: center;
     padding: 8px 10px;
+    gap: 8px;
   }
 
   .header-logo {
-    /* position: static; */
+    position: relative;
     top: 0;
     transform: none;
     margin-bottom: 5px;
   }
 
   .header-bar h5 {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
     text-align: center;
   }
 
   .menu-box {
+    width: clamp(250px, 50vw, 300px);
+    height: clamp(300px, 55vw, 350px);
     padding: 10px;
+    margin: 10px 0 -50px 0;
+    background-size: contain;
   }
 
   .menu-box img {
-    width: 30px;
+    width: clamp(80px, 15vw, 100px);
+    margin: 4px 0 0 35px;
+    display: block;
   }
 
   .menu-box p {
-    font-size: 12px;
+    margin: 14px 56px 0 0;
+    text-align: center;
+    padding: 0 5% 0 0; /* percentage-based for flexibility */
   }
 
   .hero .guru-card {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     opacity: 0.8;
   }
 
-  .guru-img {
-    width: 70px;
-    position: static;
-  }
-
   .hero-text {
+    display: flex;
     align-items: center;
     text-align: center;
   }
 
   .small-btn {
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     padding: 3px 8px;
   }
 }
