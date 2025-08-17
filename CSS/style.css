@@ -380,6 +380,11 @@ a {
   .page-title {
     font-size: 1.4rem;
   }
+  .page-header {
+    /* background-color: #fde5c8; */
+    width: 60%;
+  }
+
   .content-box {
     padding: 15px;
     font-size: 0.95rem;
