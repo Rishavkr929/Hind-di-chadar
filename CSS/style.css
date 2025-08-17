@@ -106,7 +106,7 @@ body {
   padding: 0 99px 0 0;
 }
 
-.menu-box a {
+a {
   text-decoration: none;
 }
 
@@ -284,7 +284,7 @@ body {
   }
 
   .menu-box {
-    width: clamp(250px, 50vw, 300px);
+    width: 244px;
     height: clamp(300px, 55vw, 350px);
     padding: 10px;
     margin: 10px 0 -50px 0;
@@ -320,5 +320,72 @@ body {
   .small-btn {
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     padding: 3px 8px;
+  }
+}
+
+/* Teaching */
+.page-header {
+  background-color: #fde5c8;
+  width: 100%;
+  max-width: 339px;
+  margin: 30px auto 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 6px;
+}
+.page-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #ff6600;
+}
+
+/* Image styling */
+.content-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Content box styling */
+.content-box {
+  background-color: rgba(251, 231, 196, 1); /* same color as in your image */
+  border-radius: 15px; /* rounded corners */
+  border: 1px solid rgba(108, 0, 0, 1);
+  padding: 25px 20px; /* padding inside the box */
+  margin: 0 auto 30px auto; /* center the box and add bottom margin */
+  max-width: 700px; /* maximum width for large screens */
+  line-height: 1.7;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow like in your image */
+}
+
+.content-box h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.content-box p {
+  margin-bottom: 10px;
+  text-align: justify; /* makes text wrap nicely inside the box */
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.4rem;
+  }
+  .content-box {
+    padding: 15px;
+    font-size: 0.95rem;
+    max-width: 95%; /* nearly full width on mobile */
+  }
+  .content-img {
+    max-width: 80vw;
   }
 }
