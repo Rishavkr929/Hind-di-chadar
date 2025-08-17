@@ -426,3 +426,88 @@ small {
     margin: 0 0 0 10px;
   } */
 }
+/* History */
+
+.history .content-img {
+  display: block;
+  margin: 20px auto;
+  max-width: 220px;
+  border-radius: 12px;
+}
+
+/* Content Box */
+.history .content-box {
+  background-color: #fbe7c4;
+  border: 1px solid #6c0000;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  max-width: 720px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons section */
+.btn-list {
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+.btn-custom {
+  background: #fdd9a1;
+  border: 2px solid #ff6600;
+  color: #ff6600;
+  border-radius: 30px;
+  padding: 10px 15px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn-custom:hover {
+  background: #fdd9a1;
+  color: #ff6600;
+}
+.history .page-header {
+  max-width: 142px;
+}
+.history .yatraimg {
+  display: block;
+  margin: 20px auto;
+  max-width: 315px;
+  border-radius: 12px;
+}
+
+/* Viah */
+.viah .content-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 504px;
+  height: 385px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .history .content-box {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+  .history .content-img {
+    max-width: 160px;
+  }
+  .history .page-header {
+    max-width: 108px;
+  }
+  .history .yatraimg {
+    max-width: 279px;
+  }
+  .viah .content-img {
+    max-width: 293px;
+    max-height: 263px;
+  }
+}
