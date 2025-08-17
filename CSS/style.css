@@ -333,6 +333,31 @@ a {
   text-align: center;
   border-radius: 6px;
 }
+.sub-page-header {
+  background-color: #fde5c8;
+  width: 100%;
+  max-width: 100px;
+  margin: 30px auto 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 6px;
+}
+.sub-page-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #ff6600;
+}
+
+.kesari {
+  color: #ff6600;
+}
+small {
+  text-align: right;
+  margin: 0 0 0 448px;
+}
+
 .page-title {
   text-align: center;
   font-size: 1.6rem;
@@ -374,6 +399,7 @@ a {
 .content-box p {
   margin-bottom: 10px;
   text-align: justify; /* makes text wrap nicely inside the box */
+  margin-top: 11px;
 }
 
 @media (max-width: 768px) {
@@ -393,4 +419,10 @@ a {
   .content-img {
     max-width: 80vw;
   }
+  small {
+    margin: 0 0 0 154px;
+  }
+  /* .kesari {
+    margin: 0 0 0 10px;
+  } */
 }
