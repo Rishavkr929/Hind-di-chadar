@@ -78,7 +78,7 @@ body {
   background: linear-gradient(to bottom, #ffe3b3, #ffbb66);
   background: url("/img/box.png") no-repeat center/cover;
   background-size: cover;
-  background-size: contain;
+  /* background-size: contain; */
   padding: 15px;
   text-align: center;
   color: #4b2e00;
